@@ -4,6 +4,8 @@
 	/*primary*/
 	--Pale-blue: hsl(225, 100%, 94%);
 	--Bright-blue: hsl(245, 75%, 52%);
+	--light-blue: hsl(245, 75%, 80%);
+	--hover-blue: hsl(245, 75%, 65%);
 	/*neutral*/
 	--Very-pale-blue: hsl(225, 100%, 98%);
 	--Desaturated-blue: hsl(224, 23%, 55%);
@@ -33,13 +35,127 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--Pale-blue);
+	background-image: url(images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
 }
+
+main {
+	max-width: 450px;
+	padding: 1.5rem;
+}
+
+/*----- image -----*/
 
 .image	{
 	background-image: url(images/illustration-hero.svg);
 	background-position: center;
 	width: 100%;
-	height: 200px;
+	height: 180px;
 	background-size: cover;
 }
 
+/*----- container -----*/
+
+.container {
+	border-radius: 18px;
+	overflow: hidden;
+}
+
+/*----- block-2 -----*/
+
+.block-2 {
+	background-color: white;
+	padding: 1.5rem 2rem;
+}
+
+.order h1 {
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.order p {
+	margin: 1.5rem 0 2rem;
+	color: var(--Desaturated-blue);
+}
+
+/*----- plan flex -----*/
+
+.plan {
+	background-color: var(--Very-pale-blue);
+	border-radius: 10px;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+
+.plan a {
+	font-size: .9rem;
+	font-weight: 700;
+}
+
+.plan_flex {
+	display: flex;
+}
+
+.plan_flex img {
+	margin-right: 1rem;
+}
+
+.plan_flex-annual h4,
+.plan_flex-annual span {
+	font-size: .9rem;
+}
+
+.plan_flex-annual span {
+	color: var(--Desaturated-blue);
+}
+
+
+/*----- btns -----*/
+
+.proceed .btn {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 10px;
+	font-family: 'Red Hat Display', sans-serif;
+	font-weight: 700;
+	font-size: .9rem;
+}
+
+.payment {
+	box-shadow: 1px 7px 8px var(--light-blue) ;
+	margin-bottom: 1rem;
+	background-color: var(--Bright-blue);
+	color: white;
+	transition: all .5s;
+}
+
+.cancel {
+	background-color: white;
+	color: var(--Desaturated-blue);
+}
+
+/*----- hover -----*/
+
+.payment:hover {
+	background-color: var(--hover-blue);
+}
+
+
+
+/*----- media querie 376px -----*/
+
+@media (min-width: 376px){
+	body {
+		
+	background-image: url(images/pattern-background-desktop.svg);
+	background-position:top;
+	background-repeat: no-repeat;
+	}
+}
